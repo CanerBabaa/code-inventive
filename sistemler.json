@@ -1,0 +1,35 @@
+[
+    {
+        "kodlar": {
+            "Odaya Çek": {
+                "isim": "Odaya Çek",
+                "id": "8N4k3GJLWB",
+                "desc": " Kod Paylaşım Ekibinden Electus İyi Eğlenceler Diler       |    prefix çek @kullanıcı ",
+                "modules": [
+                    "yok"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/389032915155156994/a_7c01c9262b7f8cd854aa094727da6bd9.png",
+                "main_code": "main yok",
+                "komutlar_code": "const Discord = require(\"discord.js\");\r\n\r\nexports.run = async (client, message, args) => {\r\n\r\n if(!message.member.roles.has('rol id')) return message.channel.send('Bu kodu kullanmak için yeterli yetkin yok!')\r\n\r\n  if (!message.member.voiceChannel) {\r\n    return message.channel.send(  message.author.username + \" **Ses kanalında olman lazım!**\" );\r\n  }\r\n\r\n  let kullanıcı = message.mentions.members.first();\r\n  if (!kullanıcı) return message.channel.send(\"**Kullanıcıyı etiketlemelisin.**\");\r\n\r\n  let rol = message.mentions.roles.first();\r\n  let member = message.guild.member(kullanıcı);\r\n\r\n  if (!member.voiceChannel) return message.channel.send(\"**Etiketlenen kullanıcı bir ses kanalında değil**\").then(m => m.delete(5000));\r\n\r\n  const voiceChannel = message.member.voiceChannel.id;\r\n  if (!voiceChannel) return;\r\n\r\n  member.setVoiceChannel(voiceChannel);\r\n\r\n  const voiceChannel1 = message.member.voiceChannel.name;\r\n  let embed = new Discord.RichEmbed()\r\n    .setColor(\"RANDOM\")\r\n    .setDescription(\r\n      message.author +\r\n        \" **Tarafından** \" +\r\n        kullanıcı +\r\n        \" **Kullanıcısı** `\" +\r\n        voiceChannel1 +\r\n        \"`** Sesli Kanalına Çekildi.**\"\r\n    )\r\n    .setFooter(\r\n      `${message.author.tag}`,\r\n      `${message.author.displayAvatarURL}`\r\n    )\r\n    .setTimestamp();\r\n  message.channel.send(embed).then(m => m.delete(5000));\r\n};\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: [\"çek\"],\r\n  kategori : \"moderasyon\",\r\n  permLevel: 0\r\n};\r\nexports.help = {\r\n  name: \"çek\",\r\n  description: \"çek\",\r\n  usage: \"çek\"\r\n};",
+                "kod_rank": "sistem",
+                "k_adi": "€LĘCTUS",
+                "date": "8/12/2020"
+            },
+            "Nega Bot Altyapısı ": {
+                "isim": "Nega Bot Altyapısı ",
+                "id": "A6d9O2vEy6",
+                "desc": "En İyi Bot Alt Yapısı",
+                "modules": [
+                    "'AccessDenied'",
+                    "'AccessDenied'"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/749634421552054303/a_c1d602f7c5f6772458ddedb2cd20dc03.png",
+                "main_code": "dsdsdsds",
+                "komutlar_code": "sdsdsdssds",
+                "kod_rank": "sistemler",
+                "k_adi": "₳ϟ☆°𝓚𝓪𝓷𝓮𝓴𝓲°☆",
+                "date": "10/23/2020"
+            }
+        }
+    }
+]
